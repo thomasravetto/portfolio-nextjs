@@ -15,10 +15,11 @@ export type FormData = {
 
 export default function Contacts () {
 
-    const { register, handleSubmit } = useForm<FormData>();
+    const { register, handleSubmit, reset } = useForm<FormData>();
 
     function onSubmit(data: FormData) {
         sendEmail(data);
+        reset();
     }
 
     return (
