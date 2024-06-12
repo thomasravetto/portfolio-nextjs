@@ -4,7 +4,7 @@ import Project from "./project";
 
 export default function Portfolio () {
     return (
-        <div id='portfolio' className="flex flex-col items-center">
+        <div id='portfolio' className="flex flex-col items-center w-screen">
             <h1 className="text-5xl font-semibold p-6">My <span className="primary">Journey</span></h1>
 
             {
