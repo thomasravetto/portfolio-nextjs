@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  --primary: #C70039;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.header-container, .header-image {
+  height: calc(100vh - 5rem);
+}
+
+.project-image {
+  filter: grayscale(100%);
+  transition: filter 0.3s ease-in-out;
+}
+
+.project-image:hover {
+  filter: grayscale(0%);
+}
+
+.project-container:hover .project-image {
+  filter: grayscale(0%);
+}
+
+.project-journey {
+  transition: 200ms;
+  transform: rotate(10deg);
+}
+
+.project-container:hover .project-journey {
+  transform: rotate(-10deg);
+}
+
+.contact-icon:hover {
+  color: var(--primary);
+}
+
+.tech-logo:hover {
+  color: var(--primary);
+}
+
+.primary {
+  color: var(--primary);
+}
+
+.bg-primary {
+  background-color: var(--primary);
+}
+
+.github {
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-color: white;
+}
+
+.medium:hover {
+  background-color: #FFDE95;
+  color: black;
+}
+
+.github:hover {
+  background-color: #2B3137;
+}
+
+.linkedin:hover {
+  background-color: #0072b1;
+}
+
+.carousel_container {
+  width: 80%;
+  margin: 50px;
+}
+
+.slider_video {
+  width: 100%;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 13, 13, 13;
+    --background-end-rgb: 13, 13, 13;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
