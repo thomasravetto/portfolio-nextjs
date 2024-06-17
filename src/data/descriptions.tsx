@@ -4,6 +4,7 @@ export interface IDescriptions {
     description: string,
     key_features: string;
     tech: string[],
+    github?: string
 }
 
 interface IImage {
@@ -23,7 +24,8 @@ export const descriptions: Record<string, IDescriptions> = {
                          Market: The prices of the assets can be seen in real-time in the Market section, data is taken from an API and formatted into graphs, you can easily buy or sell stocks based on the real-time data.
                          Watchlist: By storing the users favorite assets in the Database, the prices can be easily monitored from the watchlist.
                          Portfolio: All the assets owned by the user are stored in the portfolio, as well as every transaction that took place.`,
-        "tech": ["node", "react", "postgres"]
+        "tech": ["node", "react", "postgres"],
+        "github": "https://github.com/thomasravetto/Trading_Simulator"
     },
     "chat_app" : {
         "title": 'FlashChat - Real-Time Chat Application',
@@ -35,16 +37,29 @@ export const descriptions: Record<string, IDescriptions> = {
                         Friend Requests: If you want to chat with a friend, all you have to do is to search for its name and send a friend request. Your friend will now have the power to choose to accept it or to refuse it.
                         Chatting: New chats can be created with your new friends.
                         Real-Time Messaging: By using a Socket, the messages are sent and received in real-time.`,
-        "tech": ["node", "react", "postgres"]
+        "tech": ["node", "react", "postgres"],
+        "github": "https://github.com/thomasravetto/Chat_app"
     },
     "nasa_app" : {
         "title": 'NASA Project - Zero To Mastery',
         "images": [{"src": "/projects/nasa/presentation/1.jpeg", "label": "Dashboard"}],
+        "description": `NASA Project is the final project of a course I have completed called Zero To Mastery: Complete Node.js Developer.
+                        This was a Back-End project build with Node.js, it features a mission-planning system to send Rockets built by Space X on habitable exoplanets. The data for the planets was taken from the NASA website.`,
+        "key_features": `Habitable Planets Data: The data for the planets was parsed from a NASA's CSV file on exoplanets. By filtering the data based on some factors (temperature, distance from its star, orbital period), the resulting planets are chosen as destination for the missions!
+                        Rockets Data: The data for the available rockets for the missions are taken from a Space X API.
+                        Mongo DB: All the upcoming and past missions are saved in a MongoDB instance.`,
+        "tech": ["node", "react", "postgres"],
+        "github": "https://github.com/thomasravetto/ZTM-Nasa_project"
+    },
+    "smart_brain" : {
+        "title": 'Smart Brain - Zero To Mastery',
+        "images": [{"src": "/projects/face/presentation/1.jpeg", "label": "Face Succesfully Scanned"}, {"src": "/projects/face/presentation/2.jpeg", "label": "Main Page"}, {"src": "/projects/face/presentation/3.jpeg", "label": "Login Page"}],
         "description": `Smart Brain is the final Project of a course I have completed called Zero To Mastery: Complete Web Developer.
                         It allows to detect a face in the photo you paste the link of. It works by sending the photo to the Clarifai Face Recognition API and by using the data returned to 'draw' a rectangle of the person's face.`,
         "key_features": `User Authentication: With the use of a database, users can login or register and keep track of how many faces they found!
                         API Communication: The app uses Third-Party API to recognize the faces in the photo.`,
-        "tech": ["node", "react", "postgres"]
+        "tech": ["node", "react", "postgres"],
+        "github": "https://github.com/thomasravetto/facerecognition-brain-api"
     },
     "budgeting_app" : {
         "title": 'Budget-It - Budgeting application',
@@ -55,7 +70,7 @@ export const descriptions: Record<string, IDescriptions> = {
                         Balance: You can add funds to your account and see your overall financial situation, keeping track of your income and expenditure.
                         Savings: In Saving, you can add funds to the savings valut, you can even create some 'targets' to help you stay motivate in your savings journey.
                         Transactions: You can add all the transactions that you want to keep track of, allowing you to see the price and the category.`,
-        "tech": ["node", "react", "postgres"]
+        "tech": ["node", "react", "postgres"],
     },
     "youtify" : {
         "title": 'Youtify - Youtube to Spotify converter',
@@ -64,7 +79,8 @@ export const descriptions: Record<string, IDescriptions> = {
                         If you want to transfer all the songs in your Youtube playlist to Spotify but don't have time, this app may be built for you. By communicating with the Youtube and Spotify API, it formats all the songs contained in the former playlist and transfers them to the latter.`,
         "key_features": `User Authentication: Thanks to a PostgreSQL, users can easily register and login on this app.
                         Playlist tranfer: Once the playlist URL has been pasted in the form, the app will communicate with the APIs and transfer the songs.`,
-        "tech": ["node", "react", "postgres"]
+        "tech": ["node", "react", "postgres"],
+        "github": "https://github.com/thomasravetto/Youtify---Final-Project-CS50"
     },
 }
 
