@@ -6,7 +6,10 @@
   --foreground-rgb: 255, 255, 255;
   --background-start-rgb: 13, 13, 13;
   --background-end-rgb: 13, 13, 13;
-  --primary: #E72929;
+}
+
+:root {
+  --primary: #AA1313;
 }
 
 .navbar li:hover {
