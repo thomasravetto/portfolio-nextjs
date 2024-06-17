@@ -12,6 +12,8 @@ export default function Header () {
                 src={headerImage}
                 alt="Half face close-up image"
                 className="header-image w-full h-full object-contain object-left absolute left-0 -z-10"
+                height={1000}
+                width={500}
             />
         </div>
     );

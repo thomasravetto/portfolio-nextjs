@@ -1,11 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
 import { DiNodejs, DiReact, DiPostgresql, DiDocker, DiMongodb, DiPython } from "react-icons/di";
-import { FaAws } from "react-icons/fa";
+import { FaAws, FaGithubSquare } from "react-icons/fa";
 import { SiFlask } from "react-icons/si";
 import { MdArrowBackIos } from "react-icons/md";
 import Footer from "../footer/footer";
 import Slider from "./slider";
+import { IDescriptions } from "@/data/descriptions";
 
 // interface IProject {
 //   id: number;
@@ -15,23 +16,10 @@ import Slider from "./slider";
 //   subtitle: string;
 // }
 
-interface IDescriptions {
-  title: string,
-  images: IImage[];
-  description: string;
-  key_features: string;
-  tech: string[];
-}
-
 interface ITech {
   name: string,
   logo: JSX.Element,
   href: string
-}
-
-interface IImage {
-  src: string,
-  label: string
 }
 
 type TechNames = "node" | "react" | "postgres" | "aws" | "docker" | "mongo" | "python" | "flask";
@@ -93,7 +81,7 @@ export default function Project ({ projectData }: { projectData: IDescriptions }
           <div></div>
         </div>
 
-        
+
         <Slider images={projectData.images}/>
         {/* <div>
           {projectData.images.map((image, index) => {
@@ -135,6 +123,15 @@ export default function Project ({ projectData }: { projectData: IDescriptions }
             <li key={index} className="tech-logo text-7xl p-6"><Link href={techObject[tech as TechNames].href}>{techObject[tech as TechNames].logo}</Link></li>
           ))}
         </ul>
+        {
+              projectData.github &&
+              <div className="flex flex-col items-center">
+                <h1 className="text-4xl font-semibold primary">Links</h1>
+                <Link href={projectData.github} className="py-10">
+                  <FaGithubSquare className="text-5xl github-project-link cursor-pointer"/>
+                </Link>
+              </div>
+            }
       </div>
     <Footer/>
     </div>

@@ -6,7 +6,25 @@
   --foreground-rgb: 255, 255, 255;
   --background-start-rgb: 13, 13, 13;
   --background-end-rgb: 13, 13, 13;
-  --primary: #C70039;
+  --primary: #FF0000;
+}
+
+.navbar li:hover {
+  color: var(--primary);
+}
+
+.navbar-link::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: var(--primary);
+  transition: width .2s;
+}
+
+.navbar-link:hover::after {
+  width: 100%;
+  transition: width .1s;
 }
 
 html {
@@ -68,6 +86,10 @@ html {
 
 .github:hover {
   background-color: #2B3137;
+}
+
+.github-project-link:hover {
+  color: var(--primary);
 }
 
 .linkedin:hover {

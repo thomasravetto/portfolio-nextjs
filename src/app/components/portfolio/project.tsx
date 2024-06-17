@@ -9,7 +9,7 @@ import Link from 'next/link';
 
 const projectVariantsRight: Variants = {
     offscreen: {
-        x: 300,
+        x: 50,
         opacity: 0
     },
     onscreen: {
@@ -17,15 +17,15 @@ const projectVariantsRight: Variants = {
         opacity: 1,
         transition: {
             type: "spring",
-            bounce: 0.4,
-            duration: 0.8
+            bounce: 0,
+            duration: 1
           }
     }
 }
 
 const projectVariantsLeft: Variants = {
     offscreen: {
-        x: -300,
+        x: -50,
         opacity: 0
     },
     onscreen: {
@@ -33,8 +33,8 @@ const projectVariantsLeft: Variants = {
         opacity: 1,
         transition: {
             type: "spring",
-            bounce: 0.4,
-            duration: 0.8
+            bounce: 0,
+            duration: 1
           }
     }
 }
@@ -73,8 +73,8 @@ export default function Project ({project, left}: {project: IProject; left: bool
                             <Image
                                 src={image_path}
                                 alt={`Image showing the ${title} project`}
-                                height={200}
-                                width={200}
+                                height={400}
+                                width={600}
                                 className="project-image rounded-3xl object-container w-full"
                                 /> :
                             <div className='w-full h-full flex justify-center items-center'>

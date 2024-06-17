@@ -71,18 +71,18 @@ export default function NavBar () {
             href="/"
             rel="noreferrer"
           >
-            <Image src={LogoImage} alt="Logo" width={200}/>
+            <Image className="w-40" src={LogoImage} alt="Logo" width={100}/>
           </a>
         </h1>
       </div>
 
-      <ul className="hidden md:flex">
+      <ul className="navbar hidden md:flex">
         {links.map(({ id, name, href }) => (
           <li
             key={id}
-            className="nav-links px-4 cursor-pointer capitalize font-medium text-gray-300 hover:scale-105 hover:text-white duration-200 link-underline"
+            className="nav-links px-4 cursor-pointer capitalize font-medium text-gray-300 duration-200 link-underline"
           >
-            <Link href={href}>{name}</Link>
+            <Link className="navbar-link" href={href}>{name}</Link>
           </li>
         ))}
       </ul>
