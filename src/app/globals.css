@@ -12,7 +12,7 @@
   --primary: #B10B0B;
 }
 
-.navbar li:hover {
+.navbar-link:hover {
   color: var(--primary);
 }
 

@@ -9,7 +9,7 @@ import Link from 'next/link';
 
 const projectVariantsRight: Variants = {
     offscreen: {
-        x: 30,
+        x: -30,
         opacity: 0
     },
     onscreen: {
@@ -25,7 +25,7 @@ const projectVariantsRight: Variants = {
 
 const projectVariantsLeft: Variants = {
     offscreen: {
-        x: -30,
+        x: 30,
         opacity: 0
     },
     onscreen: {

@@ -95,13 +95,13 @@ export default function NavBar () {
       </div>
 
       {nav && (
-        <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-black text-gray-500">
+        <ul className="navbar flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-black text-gray-300">
           {links.map(({ id, name, href }) => (
             <li
               key={id}
               className="px-4 cursor-pointer capitalize py-6 text-4xl"
             >
-              <Link onClick={() => setNav(!nav)} href={href}>
+              <Link className="navbar-link" onClick={() => setNav(!nav)} href={href}>
                 {name}
               </Link>
             </li>
