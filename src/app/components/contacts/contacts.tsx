@@ -45,10 +45,10 @@ export default function Contacts () {
             </form>
             <p className=" text-2xl p-6 font-medium">or</p>
             <div className="flex justify-between w-20">
-                <Link href={'https://github.com/thomasravetto'}>
+                <Link aria-label="Github profile" href={'https://github.com/thomasravetto'}>
                     <FaGithub className="contact-icon" size={28}/>
                 </Link>
-                <Link href={'https://www.linkedin.com/in/thomasravetto1/'}>
+                <Link aria-label="LinkedIn Profile" href={'https://www.linkedin.com/in/thomasravetto1/'}>
                     <FaLinkedin className="contact-icon" size={28}/>
                 </Link>
             </div>
