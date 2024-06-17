@@ -5,7 +5,7 @@ export default function Header () {
     return (
         <div id='header' className="header-container mt-20 w-screen flex flex-row justify-center items-center">
             <div className="h-full flex flex-col justify-center items-center h-1/4">
-                <h1 className="text-6xl md:text-8xl font-semibold p-2"><span className="primary">Thomas</span> Ravetto</h1>
+                <h1 className="text-4xl md:text-8xl font-semibold p-2"><span className="primary">Thomas</span> Ravetto</h1>
                 <p className="text-xl md:text-4xl font-extralight p-2">I am a <span className="primary">Software Developer</span> based in Turin</p>
             </div>
             <Image

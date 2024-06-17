@@ -9,7 +9,7 @@ import Link from 'next/link';
 
 const projectVariantsRight: Variants = {
     offscreen: {
-        x: 50,
+        x: 30,
         opacity: 0
     },
     onscreen: {
@@ -25,7 +25,7 @@ const projectVariantsRight: Variants = {
 
 const projectVariantsLeft: Variants = {
     offscreen: {
-        x: -50,
+        x: -30,
         opacity: 0
     },
     onscreen: {
@@ -51,7 +51,7 @@ export default function Project ({project, left}: {project: IProject; left: bool
                     viewport={{ once: true, amount: 0.8 }}
                     variants={left ? projectVariantsLeft : projectVariantsRight}>
                 <Link href={slug !== "#contacts" ? `/projects/${slug}` : `/${slug}`} className={`w-full flex flex-col items-center text-center mb-20 md:mb-0 md:text-left ${left ? "md:flex-row" : "md:flex-row-reverse"}`}>
-                    <div className="w-1/2">
+                    <div className="w-full md:w-1/2">
                         <div className="w-full">
                             <p className="primary text-2xl font-medium py-2">{date}</p>
                             <h2 className="text-4xl tracking-tighter font-semibold py-4">{title}</h2>
@@ -67,7 +67,7 @@ export default function Project ({project, left}: {project: IProject; left: bool
                         </div>
                     </div>
                     <div className="w-8"></div>
-                    <div className={`w-1/2`}>
+                    <div className={`w-full md:w-1/2`}>
                         {
                             slug !== '#contacts' ?
                             <Image
