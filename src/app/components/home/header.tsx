@@ -1,7 +1,7 @@
 'use client'
 
 import Image from "next/image";
-import headerImage from "../../../../public/home/headerImage - dimensioni medie.png";
+import headerImage from "../../../../public/home/headerImage.png";
 
 import { motion, Variants } from 'framer-motion';
 
