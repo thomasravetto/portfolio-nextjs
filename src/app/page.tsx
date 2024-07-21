@@ -6,7 +6,7 @@ import Footer from "./components/footer/footer";
 
 export default function Home() {
   return (
-    <div>
+    <div className="flex flex-col">
       <Header/>
       <Portfolio/>
       <About/>
