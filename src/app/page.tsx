@@ -4,6 +4,10 @@ import About from "./components/about/about";
 import Contacts from "./components/contacts/contacts";
 import Footer from "./components/footer/footer";
 
+ useEffect(() => {
+    updatePrimaryColor();
+  }, []);
+
 export default function Home() {
   return (
     <div className="flex flex-col">
