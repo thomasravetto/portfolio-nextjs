@@ -24,12 +24,8 @@ function updatePrimaryColor () {
     "#FF33B2", // Fuchsia
   ];
 
-  const today = new Date().getDate() % 20;
+  let today = new Date().getDate() % 20;
   const root = document.documentElement;
-
-  if (today > 19) {
-    today = 8;
-  }
 
   root.style.setProperty("--primary", colors[today]);
   return;
