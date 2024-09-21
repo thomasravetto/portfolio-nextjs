@@ -5,10 +5,6 @@ import Contacts from "./components/contacts/contacts";
 import Footer from "./components/footer/footer";
 import ClientHome from "./components/home/client";
 
- useEffect(() => {
-    updatePrimaryColor();
-  }, []);
-
 export default function Home() {
 
   return (
